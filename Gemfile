@@ -11,6 +11,8 @@ gem 'sinatra-contrib'
 gem 'i18n'
 gem 'config'
 
+gem 'bunny'
+
 gem 'activesupport', require: false
 
 gem 'dry-initializer'
