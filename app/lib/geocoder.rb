@@ -6,7 +6,13 @@ module Geocoder
   DATA_PATH = File.join(ApplicationLoader.root, "db/data/city.csv")
 
   def geocode(city)
-    data[city]
+    coordinates = data[city]
+    Application.logger.info(
+        "FetchCoordinates for #{city}",
+        city: city,
+        coordinates: coordinates
+    )
+    coordinates
   end
 
   def data

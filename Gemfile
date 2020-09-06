@@ -13,6 +13,9 @@ gem 'config'
 
 gem 'activesupport', require: false
 
+gem 'rack-ougai'
+gem 'amazing_print' # нужен для ouagi!
+
 gem 'dry-initializer'
 gem 'dry-validation'
 

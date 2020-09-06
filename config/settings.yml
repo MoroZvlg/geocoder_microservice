@@ -1,0 +1,7 @@
+app:
+  name: geocoder
+rabbit:
+  pool_size: 10
+logger:
+  path: log/app.log
+  level: info
