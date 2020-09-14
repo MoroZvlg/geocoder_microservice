@@ -4,3 +4,6 @@
 /config/settings.local.yml
 /log/*
 !/log/.keep
+
+deploy/*.tar
+deploy/*.tar.gz
