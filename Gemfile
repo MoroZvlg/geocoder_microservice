@@ -5,6 +5,7 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'puma'
+gem 'rack'
 gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-contrib'
 
@@ -12,6 +13,8 @@ gem 'i18n'
 gem 'config'
 
 gem 'activesupport', require: false
+
+gem 'prometheus-client'
 
 gem 'rack-ougai'
 gem 'amazing_print' # нужен для ouagi!

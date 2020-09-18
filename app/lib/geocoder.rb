@@ -6,12 +6,16 @@ module Geocoder
   DATA_PATH = File.join(ApplicationLoader.root, "db/data/city.csv")
 
   def geocode(city)
+    starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     coordinates = data[city]
+    spent = ((Process.clock_gettime(Process::CLOCK_MONOTONIC) - starting) * 1000).round
     Application.logger.info(
         "FetchCoordinates for #{city}",
         city: city,
         coordinates: coordinates
     )
+    Metrics.geocoding_duration_milliseconds.observe(spent, labels: { city: city })
+    Metrics.geocoding_requests_total.increment(labels: { result: coordinates.present? ? "success": "failure" })
     coordinates
   end
 

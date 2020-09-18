@@ -65,6 +65,7 @@ GEM
     oj (3.10.13)
     ougai (1.8.5)
       oj (~> 3.10)
+    prometheus-client (2.1.0)
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -118,7 +119,9 @@ DEPENDENCIES
   dry-validation
   factory_bot
   i18n
+  prometheus-client
   puma
+  rack
   rack-ougai
   rack-test
   rspec
